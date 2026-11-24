@@ -1,0 +1,449 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Limescale Cup World Championship</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f3f3ee;--card:#fff;--tx:#0a0a0c;--mu:#565660;--bd:#d6d6cc;--ac:#78672f;--hd:#050a24}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#060a1c;--card:#0d1432;--tx:#fff;--mu:#a6b0d4;--bd:#27315e;--hd:#040716;--ac:#b9a56a}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#060a1c;--card:#0d1432;--tx:#fff;--mu:#a6b0d4;--bd:#27315e;--hd:#040716;--ac:#b9a56a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 "Helvetica Neue",Arial,system-ui,sans-serif}
+header{background:var(--hd);color:#fff;padding:16px 16px 14px;border-bottom:4px solid var(--ac);display:flex;gap:14px;align-items:center}
+.logo b{display:inline-block;background:var(--ac);color:#fff;font-style:italic;font-weight:900;font-size:22px;padding:6px 14px;transform:skewX(-12deg);letter-spacing:1px}
+header h1{margin:0;font-size:22px;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:.5px}header p{margin:2px 0 0;color:#a8a8b5;font-size:12px;text-transform:uppercase;letter-spacing:1.2px}
+main{max-width:1000px;margin:0 auto;padding:6px 12px 40px}
+.bar{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.bar button{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:6px 13px;border-radius:3px;font:700 13px Arial,sans-serif;text-transform:uppercase;letter-spacing:.6px;cursor:pointer}
+.bar button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.tabs{border-bottom:1px solid var(--bd);gap:0;margin-top:8px}.tabs button{background:none;border:0;border-bottom:4px solid transparent;border-radius:0;padding:12px 16px;font-size:14px;color:var(--mu)}.tabs button.on{background:none;color:var(--tx);border-bottom-color:var(--ac)}
+.hero{padding:18px 0 6px}.hero small{color:var(--ac);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:12px}.hero h1{margin:2px 0 6px;font-size:34px;font-weight:900;font-style:italic;text-transform:uppercase;line-height:1.05}
+.pod{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0}.tile{background:var(--card);border:1px solid var(--bd);border-top:5px solid var(--c);border-radius:4px;padding:12px 14px;display:flex;flex-direction:column}
+.tile .p{font-size:34px;font-weight:900;font-style:italic;color:var(--mu);line-height:1}.tile .nm{font-size:20px;font-weight:900;text-transform:uppercase;font-style:italic;margin-top:6px}.tile .pt{font-size:22px;font-weight:800;margin-top:2px}.tile small{font-size:11px;color:var(--mu)}
+@media(max-width:560px){.pod{gap:6px}.tile{padding:10px}.tile .nm{font-size:15px}.tile .pt{font-size:17px}.hero h1{font-size:26px}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:4px;padding:14px;margin:12px 0}.card h2{margin:0 0 10px;font-size:15px;text-transform:uppercase;font-style:italic;font-weight:900;letter-spacing:.5px;border-left:5px solid var(--ac);padding-left:9px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.sx{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:9px 8px;text-align:left;border-bottom:1px solid var(--bd);white-space:nowrap}th{color:var(--mu);font-size:11px;text-transform:uppercase;letter-spacing:.8px;font-weight:700}td.n,th.n{text-align:right}tr:last-child td{border-bottom:0}
+.pos{width:34px;font-weight:900;font-style:italic;font-size:17px}.n b{font-size:16px;font-weight:800}
+.bar2{height:4px;background:var(--bd);margin-top:5px}.bar2 i{display:block;height:100%}
+.dr{display:inline-flex;align-items:center;gap:8px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;font-size:14px}.dr i{width:4px;height:18px;border-radius:1px;display:inline-block}
+.badge{display:inline-block;background:var(--ac);color:#fff;padding:2px 8px;font-size:11px;font-weight:800;margin-left:8px;text-transform:uppercase;letter-spacing:.6px;transform:skewX(-10deg)}
+.prog{color:var(--mu)}
+
+:root{--gold:#a8780a}@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--gold:#f5c542}}:root[data-theme=dark]{--gold:#f5c542}
+header{border-bottom:0;border-top:4px solid var(--ac);position:relative;padding-bottom:22px;background:repeating-linear-gradient(45deg,#060b24 0 3px,#0a1131 3px 6px)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:repeating-conic-gradient(#fff 0 25%,#000 0 50%) 0 0/16px 16px}
+main,header{position:relative;z-index:1}
+.bgfx{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bgfx:before{content:"";position:absolute;inset:-130px;background:repeating-conic-gradient(var(--tx) 0 25%,transparent 0 50%) 0 0/72px 72px;opacity:.045;animation:drift 80s linear infinite}
+.bgfx:after{content:"";position:absolute;inset:-400px;background:repeating-linear-gradient(115deg,transparent 0 140px,rgba(212,175,55,.13) 140px 144px,transparent 144px 300px);animation:lines 40s linear infinite}
+@keyframes drift{to{transform:translate(144px,144px)}}@keyframes lines{to{transform:translateX(300px)}}
+.dr svg{width:28px;height:21px;flex:none}.tile{position:relative;overflow:hidden}.tile .hm{position:absolute;right:10px;top:10px;opacity:.95}.tile .hm svg{width:54px;height:40px}
+.tile.gold{border-top-color:#d4af37;background:linear-gradient(160deg,rgba(245,197,66,.30),var(--card) 65%);box-shadow:0 0 0 1px rgba(212,175,55,.55),0 8px 26px rgba(212,175,55,.2)}
+.tile.gold .p,.tile.gold .pt{color:var(--gold)}.tile.gold:after{content:"";position:absolute;top:0;bottom:0;width:60px;left:-80px;background:linear-gradient(100deg,transparent,rgba(255,235,150,.35),transparent);animation:sheen 7s ease-in-out infinite}
+@keyframes sheen{0%,60%{left:-80px}100%{left:120%}}
+tr.gold td{background:linear-gradient(90deg,rgba(212,175,55,.24),rgba(212,175,55,.05))}tr.gold .pos,tr.gold .n b{color:var(--gold)}
+.hero h1.gold-t{background:linear-gradient(100deg,#b8860b,#f7e08a 40%,#d4af37 60%,#b8860b);-webkit-background-clip:text;background-clip:text;color:transparent}
+td.gold-t{color:var(--gold)}@media(max-width:560px){.tile .hm svg{width:40px;height:30px}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}}
+.logo svg{display:block}
+.pod{grid-template-columns:1fr 1.18fr 1fr;align-items:end;gap:8px}
+.tile{align-items:center;text-align:center;justify-content:flex-end;border-top-width:5px}.tile .hm{position:static;margin-bottom:6px}.tile .hm svg{width:92px;height:69px}
+.pd1{min-height:230px}.pd2{min-height:190px}.pd3{min-height:162px}
+.tile .p{font-size:44px}.pd1 .p{font-size:56px}
+@media(max-width:560px){.tile .hm svg{width:58px;height:44px}.pd1{min-height:190px}.pd2{min-height:160px}.pd3{min-height:140px}.tile .p{font-size:30px}.pd1 .p{font-size:40px}}
+.dr svg{width:36px;height:27px}
+.logo b{display:inline-block;background:var(--ac);color:#fff;font-style:italic;font-weight:900;font-size:26px;padding:7px 18px;transform:skewX(-14deg);letter-spacing:2px;box-shadow:inset -6px 0 0 rgba(255,255,255,.35)}
+.pod{max-width:520px;margin:14px auto 8px;grid-template-columns:1fr 1.12fr 1fr;gap:6px;align-items:end}
+.tile{padding:8px 6px 10px;border-top-width:4px}.tile .hm svg{width:62px;height:44px}.pd1 .hm svg{width:78px;height:56px}
+.tile .nm{font-size:13px;margin-top:2px}.pd1 .nm{font-size:17px}.tile .p{font-size:24px}.pd1 .p{font-size:34px}.tile .pt{font-size:15px}.pd1 .pt{font-size:19px}
+.pd1{min-height:176px;transform:translateY(-12px)}.pd2{min-height:130px}.pd3{min-height:110px}
+.dr svg{width:38px;height:27px}
+.games{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 4px}
+.gbtn{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:12px 16px;text-align:left;cursor:pointer;border-radius:3px;position:relative;overflow:hidden;font-family:inherit}
+.gbtn b{display:block;font:900 italic 17px Arial,sans-serif;text-transform:uppercase;margin-top:2px}.gbtn small{color:var(--mu);font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.gbtn.on{background:linear-gradient(120deg,var(--ac),#1a1a1a);color:#fff;border-color:var(--ac)}.gbtn.on small{color:#d9d9df}
+.gbtn:after{content:"";position:absolute;right:0;top:0;bottom:0;width:8px;background:repeating-conic-gradient(#fff 0 25%,#000 0 50%) 0 0/8px 8px;opacity:.3}
+@media(max-width:560px){.gbtn b{font-size:12px}.gbtn{padding:9px 10px}}
+.bgfx:before{inset:-20%;background:radial-gradient(circle at 20% 30%,rgba(212,175,55,.30),transparent 40%),radial-gradient(circle at 82% 18%,rgba(0,200,255,.20),transparent 38%),radial-gradient(circle at 58% 86%,rgba(212,175,55,.24),transparent 42%);opacity:1;animation:orb 20s ease-in-out infinite alternate}
+.bgfx:after{inset:-40%;background:repeating-linear-gradient(60deg,transparent 0 46px,rgba(212,175,55,.11) 46px 48px),repeating-linear-gradient(-60deg,transparent 0 46px,rgba(212,175,55,.11) 46px 48px);animation:chev 26s linear infinite}
+@keyframes orb{from{transform:translate(-5%,-4%) scale(1)}to{transform:translate(6%,5%) scale(1.18)}}@keyframes chev{to{transform:translateX(221.6px)}}
+.tile.gold{box-shadow:0 0 0 1px rgba(245,197,66,.7),0 0 28px rgba(245,197,66,.55),0 0 60px rgba(245,197,66,.25);animation:glow 3.2s ease-in-out infinite alternate}
+@keyframes glow{from{box-shadow:0 0 0 1px rgba(245,197,66,.6),0 0 20px rgba(245,197,66,.4),0 0 44px rgba(245,197,66,.18)}to{box-shadow:0 0 0 1px rgba(245,197,66,.9),0 0 36px rgba(245,197,66,.75),0 0 80px rgba(245,197,66,.35)}}
+.hero h1.gold-t{filter:drop-shadow(0 0 14px rgba(245,197,66,.65))}
+.gl .dr{color:#f5c542;font-size:22px;text-shadow:0 0 12px rgba(245,197,66,.85),0 0 30px rgba(245,197,66,.5)}.gl+.badge{background:linear-gradient(100deg,#b8860b,#f5c542);color:#2a1d00}
+tr.gold .dr,td.gold-t .dr{color:#f5c542;text-shadow:0 0 10px rgba(245,197,66,.7)}
+tr.gold td{background:linear-gradient(90deg,rgba(245,197,66,.32),rgba(245,197,66,.06))}
+.bgfx:before{content:"";position:absolute;inset:0 auto 0 -45%;width:45%;background:repeating-linear-gradient(115deg,rgba(212,175,55,.16) 0 16px,transparent 16px 40px);opacity:0;transform:skewX(-20deg);animation:sweep 24s ease-in-out infinite}
+.bgfx:after{content:"";position:absolute;inset:0 -35% 0 auto;width:35%;background:repeating-conic-gradient(rgba(212,175,55,.17) 0 25%,transparent 0 50%) 0 0/56px 56px;opacity:0;transform:skewX(-20deg);animation:sweepr 38s ease-in-out infinite 10s}
+@keyframes sweep{0%{transform:translateX(0) skewX(-20deg);opacity:0}3%{opacity:1}17%{opacity:1}22%{transform:translateX(330%) skewX(-20deg);opacity:0}100%{transform:translateX(330%) skewX(-20deg);opacity:0}}
+@keyframes sweepr{0%{transform:translateX(0) skewX(-20deg);opacity:0}3%{opacity:1}17%{opacity:1}22%{transform:translateX(-420%) skewX(-20deg);opacity:0}100%{transform:translateX(-420%) skewX(-20deg);opacity:0}}
+.nav button{font-size:15px;letter-spacing:1px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin:12px 0}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:3px;padding:10px 12px}.kpi b{display:block;font:900 italic 24px Arial,sans-serif}.kpi small{color:var(--mu);font-size:11px;text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+.goldcard{border-color:rgba(245,197,66,.6);box-shadow:0 0 24px rgba(245,197,66,.25)}.rc{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.big svg{width:96px;height:73px}
+.hall{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.hc{border:1px solid var(--bd);border-radius:3px;padding:8px 10px}.hc small{display:block;color:var(--mu);font-size:11px;font-weight:700;letter-spacing:.8px}
+.drv{border-left:6px solid var(--c)}.dh{display:flex;align-items:center;gap:16px;margin-bottom:6px}.drv h2{border:0;padding:0;font-size:26px;margin:0}.nick{color:var(--mu);font-size:16px;font-weight:700}.tag{color:var(--ac);font-weight:800;text-transform:uppercase;letter-spacing:1.2px;font-size:12px}.about{margin:6px 0 0;line-height:1.55}
+.bgfx:before,.bgfx:after{display:none}
+.blob{position:absolute;border-radius:50% 45% 55% 50%;background:radial-gradient(circle at 35% 35%,rgba(215,200,140,.85),rgba(185,165,106,.4) 55%,transparent 72%);filter:blur(16px);opacity:0;animation:blob 24s ease-in-out infinite}
+@keyframes blob{0%{opacity:0;transform:translate(0,0) scale(.7);border-radius:50% 45% 55% 50%}25%{opacity:var(--o);border-radius:42% 58% 48% 52%}55%{opacity:var(--o);border-radius:58% 42% 56% 44%}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.25);border-radius:48% 52% 40% 60%}}
+header{display:block;background:linear-gradient(110deg,#040716,#0a1236 60%,#101a4a);border-top:0;padding:20px 16px 0;overflow:hidden}header::after{display:none}
+header::before{content:"";position:absolute;right:-4%;top:0;bottom:0;width:42%;background:linear-gradient(110deg,transparent 0 28%,rgba(255,255,255,.08) 28% 44%,transparent 44% 54%,rgba(255,255,255,.05) 54% 60%,transparent 60%);pointer-events:none}
+.hrow{display:flex;gap:14px;align-items:center;max-width:1000px;margin:0 auto}header h1{font-size:28px;letter-spacing:1px}
+header .nav{max-width:1000px;margin:14px auto 0;border:0;gap:2px;overflow-x:auto;flex-wrap:nowrap}header .nav button{background:none;border:0;border-bottom:3px solid transparent;color:#aab4d8;white-space:nowrap;border-radius:0}header .nav button.on{background:none;color:#fff;border-bottom-color:#fff}
+.games{display:inline-flex;gap:0;border:1px solid var(--bd);border-radius:999px;overflow:hidden;background:var(--card);margin:16px 0 4px}
+.gbtn{border:0;border-radius:0;background:none;padding:9px 20px;text-align:center}.gbtn small,.gbtn:after{display:none}.gbtn b{margin:0;font-size:14px}.gbtn.on{background:var(--ac);color:#fff}
+.num{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:26px;padding:0 6px;font:900 italic 16px Arial,sans-serif;color:#fff;border-radius:4px;transform:skewX(-8deg);box-shadow:inset 0 -3px 0 rgba(0,0,0,.28)}
+.big .num{min-width:84px;height:64px;font-size:40px}.tile .hm .num{min-width:54px;height:40px;font-size:24px}.pd1 .hm .num{min-width:66px;height:48px;font-size:30px}
+.lead{background:linear-gradient(120deg,#1a1a1a,#1a1a1a);color:#fff;border-radius:4px;padding:26px;margin-top:16px}.lead small{font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:12px;color:#d9d9df}.lead h1{margin:4px 0 8px;font:900 italic 36px/1.05 Arial,sans-serif;text-transform:uppercase}.lead p{margin:0 0 12px;color:#ececf0}.lead .dr{color:#fff;font-size:18px}.lead .gl .dr{color:#f5c542}
+.ng{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}@media(max-width:820px){.ng{grid-template-columns:1fr 1fr}}@media(max-width:560px){.ng{grid-template-columns:1fr}.lead h1{font-size:26px}}
+.nt{background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--ac);border-radius:4px;padding:14px}.nt small{color:var(--ac);font-weight:800;text-transform:uppercase;letter-spacing:1.2px;font-size:11px}.nt h3{margin:4px 0 8px;font:900 italic 17px Arial,sans-serif;text-transform:uppercase}.nt p{margin:6px 0}
+.pr{display:flex;gap:10px;align-items:center;padding:5px 0}.pr b{font:900 italic 20px Arial,sans-serif;width:22px}.wr{display:grid;grid-template-columns:120px 1fr 24px;align-items:center;gap:8px;margin:6px 0}.wr i{display:block;height:8px;border-radius:2px}.wr b{text-align:right}
+.temple{background:#f7f4ec;color:#3a342a;border-radius:4px;padding:0 10px 14px;margin-top:16px;border:1px solid #e1dac8;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.ped{clip-path:polygon(50% 0,100% 100%,0 100%);background:#fff;height:130px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:12px;text-align:center;margin:0 -10px}.ped b{font:900 italic 20px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;color:#8a6a10}.ped small{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#8a7a52}
+.ent{height:16px;background:linear-gradient(#fff,#e9e4d6);border-bottom:2px solid #d8d1bd;margin:0 -10px}
+.gl2{text-align:center;font:900 italic 13px Arial,sans-serif;text-transform:uppercase;letter-spacing:2px;color:#8a7a52;margin-top:14px}.cols{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;padding:10px 4px 4px}
+.pil{width:62px;text-align:center}.pil small{display:block;font-size:10px;font-weight:700;color:#8a7a52;margin-bottom:4px}.cap{height:12px;background:#fff;border:1px solid #d8d1bd;border-radius:3px 3px 0 0;box-shadow:0 3px 0 #ece7d8}
+.shaft{height:124px;margin:0 8px;background:repeating-linear-gradient(90deg,#fff 0 5px,#e6e1d3 5px 8px);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 12px rgba(120,100,50,.2)}.shaft span{writing-mode:vertical-rl;transform:rotate(180deg);font:800 13px Arial,sans-serif;text-transform:uppercase;letter-spacing:2px;color:#8a6a10;background:rgba(255,255,255,.88);padding:6px 2px}
+.base{height:12px;background:#fff;border:1px solid #d8d1bd;border-radius:0 0 3px 3px}.steps{margin-top:12px}.steps i{display:block;height:10px;background:#fff;border-bottom:2px solid #d8d1bd;margin:0 auto}.steps i:nth-child(1){width:92%}.steps i:nth-child(2){width:96%}.steps i:nth-child(3){width:100%}
+.tally{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding-top:14px}.tally span{background:#fff;border:1px solid #d8d1bd;padding:4px 12px;border-radius:3px;font-weight:700}.tally b{color:#8a6a10}
+
+/* ---- interactive + no filled boxes ---- */
+.bar button,.bar button.on,.gbtn,.gbtn.on{background:linear-gradient(var(--u,var(--ac)),var(--u,var(--ac))) no-repeat left bottom/0 2px;border:0;border-radius:0;color:var(--tx);padding:9px 12px;cursor:pointer;transition:background-size .28s ease,color .2s}
+.bar button:hover,.gbtn:hover{background-size:100% 2px;color:var(--ac)}
+.bar button.on,.gbtn.on{background-size:100% 3px;color:var(--ac)}
+.tabs button.on{border-bottom:0}.games{border:0;background:none;border-radius:0;gap:6px}.gbtn b{font-size:15px}
+header .nav button,header .nav button.on{--u:#fff;color:#aab4d8;padding:10px 14px}header .nav button:hover{color:#fff;background-size:100% 2px}header .nav button.on{color:#fff;background-size:100% 3px}
+button:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.logo b{background:none;box-shadow:none;padding:0 2px 0 0;font-size:36px;letter-spacing:3px;color:transparent;-webkit-text-stroke:1.6px #fff;position:relative;transition:color .3s,text-shadow .3s}
+.logo b:before{content:"///";position:absolute;left:-34px;top:2px;font-size:20px;letter-spacing:0;-webkit-text-stroke:0;color:#d8c88c;opacity:.9}
+.logo b:after{content:"";position:absolute;left:0;right:-6px;bottom:-5px;height:3px;background:linear-gradient(90deg,#fff,#d8c88c 70%,transparent)}
+.logo{padding-left:34px;cursor:pointer}.logo:hover b{color:#fff;text-shadow:0 0 18px rgba(212,175,55,.7)}
+.num{background:none;border-radius:0;box-shadow:none;transform:none;min-width:0;height:auto;padding:0 1px 1px;color:var(--c);border-bottom:3px solid var(--c);font-size:17px;text-shadow:0 0 12px color-mix(in srgb,var(--c) 55%,transparent);transition:text-shadow .25s}
+.big .num{font-size:60px;min-width:0;height:auto;border-bottom-width:5px}.tile .hm .num{font-size:30px;min-width:0;height:auto}.pd1 .hm .num{font-size:42px;min-width:0;height:auto}
+.dr:hover .num{text-shadow:0 0 20px var(--c)}
+.badge{background:none;border:1px solid currentColor;color:var(--ac);transform:none}.gl+.badge{background:none;color:#f5c542}
+.lead{background:none;border-radius:0;padding:26px 0 20px;border-bottom:1px solid var(--bd);position:relative}.lead:after{content:"";position:absolute;left:0;bottom:-1px;width:140px;height:3px;background:var(--ac)}
+.lead h1{background:linear-gradient(100deg,var(--tx) 30%,var(--ac));-webkit-background-clip:text;background-clip:text;color:transparent}.lead p{color:var(--mu)}.lead small{color:var(--ac)}.lead .dr{color:var(--tx)}.lead .gl .dr{color:#f5c542}
+.kpi{background:none;border:0;border-left:3px solid var(--ac);border-radius:0;padding:4px 12px;transition:border-color .25s,transform .25s}.kpi:hover{transform:translateX(4px)}
+.nt,.tile,.hc,.drv,.pil{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.nt:hover,.hc:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.25);border-color:var(--ac)}
+.tile:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(0,0,0,.3)}.pd1:hover{transform:translateY(-18px)}
+.drv:hover{border-left-width:14px;box-shadow:0 10px 28px rgba(0,0,0,.22)}
+.pil:hover{transform:translateY(-6px)}.pil:hover .shaft span{color:#b8860b}.pil:hover .shaft{box-shadow:inset 0 0 14px rgba(212,175,55,.5)}
+.tally span{transition:transform .2s}.tally span:hover{transform:translateY(-3px)}
+tbody tr,table tr{transition:background .2s}table tr:hover td{background:rgba(185,165,106,.12)}tr.gold:hover td{background:linear-gradient(90deg,rgba(245,197,66,.45),rgba(245,197,66,.1))}
+.dr{transition:color .2s}.nt tr:hover .dr,.card tr:hover .dr{color:var(--ac)}tr.gold:hover .dr{color:#ffd966}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}@keyframes grow{from{transform:scaleX(0)}}
+#out>*{animation:rise .45s ease both}.nt{animation:rise .5s ease both}.ng>:nth-child(2){animation-delay:.06s}.ng>:nth-child(3){animation-delay:.12s}.ng>:nth-child(4){animation-delay:.18s}.ng>:nth-child(5){animation-delay:.24s}.ng>:nth-child(6){animation-delay:.3s}
+.wr i,.bar2 i{transform-origin:left;animation:grow .9s ease-out both}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
+
+/* ---- more breathing room ---- */
+header{padding:30px 28px 0}.hrow{gap:46px}header h1{margin-bottom:4px}header .nav{margin-top:26px}header .nav button{padding:12px 18px}
+main{max-width:1100px;padding:16px 28px 70px}
+.bar{gap:12px;margin:20px 0}.bar button,.bar button.on,.gbtn,.gbtn.on{padding:11px 18px}.games{gap:10px;margin:26px 0 10px}
+.hero{padding:44px 0 18px}.hero h1{margin:6px 0 14px}.hero p{max-width:620px;line-height:1.7}
+.lead{padding:48px 0 36px;margin-top:10px}.lead h1{margin:8px 0 16px}.lead p{line-height:1.7;margin-bottom:22px}
+.kpis{gap:26px;margin:30px 0}.kpi{padding:8px 20px}
+.card{padding:26px;margin:26px 0}.card h2{margin-bottom:20px}
+.grid{gap:26px}.ng{gap:26px;margin-top:30px}.nt{padding:26px}.nt h3{margin:8px 0 18px}.nt p{margin:12px 0}
+th,td{padding:13px 12px}.pos{width:44px}.pr{padding:9px 0;gap:14px}.wr{margin:12px 0;gap:14px}
+.pod{max-width:620px;gap:14px;margin:34px auto 22px}.tile{padding:14px 10px 16px}
+.drv{padding:30px 32px}.dh{gap:30px;margin-bottom:22px}.drv .kpis{margin:22px 0}.about{margin-top:22px;line-height:1.75}
+.temple{padding:0 28px 28px;margin-top:30px}.cols{gap:20px 22px;padding:18px 6px 8px}.tally{gap:14px;padding-top:24px}.steps{margin-top:22px}
+.hall .hc{padding:12px 14px}
+footer{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:10px 28px 50px}
+.ft{border-top:1px solid var(--bd);padding:38px 0 8px}.ft h4{margin:0 0 26px;font:900 italic 14px Arial,sans-serif;text-transform:uppercase;letter-spacing:2px;color:var(--mu)}
+.spons{display:flex;flex-wrap:wrap;gap:22px 46px;align-items:center}
+.sp{color:var(--mu);font-size:19px;white-space:nowrap;cursor:default;background:linear-gradient(var(--ac),var(--ac)) no-repeat left bottom/0 2px;padding-bottom:5px;transition:color .25s,background-size .3s}.sp:hover{color:var(--tx);background-size:100% 2px}
+.s1{font-weight:900;letter-spacing:3px;text-transform:uppercase}.s2{font-style:italic;font-weight:900;font-size:22px}.s3{font-family:Georgia,serif;font-style:italic;font-weight:700}.s4{font-family:"Courier New",monospace;font-weight:700;letter-spacing:1px}.s5{font-weight:300;letter-spacing:5px;text-transform:uppercase;font-size:15px}.s6{font-weight:800;letter-spacing:-.5px;font-size:21px}
+.soc{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:22px}
+.sc{border-left:3px solid var(--ac);padding:6px 20px;transition:transform .25s,border-color .25s}.sc:hover{transform:translateX(6px);border-color:#f5c542}
+.sc small{display:block;color:var(--mu);font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:11px}.sc b{display:block;font:900 italic 32px Arial,sans-serif;margin:4px 0 0}.sc i{color:var(--mu);font-size:12px;font-style:normal}
+.hdl{color:var(--ac);font-weight:800;margin:26px 0 0}.fine{color:var(--mu);font-size:12px;line-height:1.7;margin:44px 0 0;border-top:1px solid var(--bd);padding-top:20px}
+@media(max-width:560px){header{padding:22px 16px 0}.hrow{gap:38px}main{padding:8px 16px 50px}.card,.nt{padding:18px}.drv{padding:20px}.ng,.grid{gap:18px}.kpis{gap:16px}footer{padding:10px 16px 40px}.lead{padding:30px 0 24px}.temple{padding:0 14px 20px}.pod{gap:8px}}
+
+.logo:focus-visible{outline:2px solid #fff;outline-offset:6px}
+.cols{gap:34px 28px;padding:24px 6px 10px}
+.tro{width:156px;text-align:center;transition:transform .3s ease,filter .3s ease;cursor:default}
+.tro svg{width:100%;height:auto;display:block;filter:drop-shadow(0 8px 10px rgba(30,90,160,.28))}
+.tro small{display:block;margin-top:8px;font-size:11px;font-weight:800;letter-spacing:1.2px;color:#8a7a52}
+.tro:hover{transform:translateY(-10px) scale(1.05)}.tro:hover svg{filter:drop-shadow(0 0 16px rgba(110,190,255,.85))}
+.sh{animation:shine 6s ease-in-out infinite}.tw{transform-box:fill-box;transform-origin:center;animation:tw 3s ease-in-out infinite}
+@keyframes shine{0%{transform:translateX(-60px)}60%,100%{transform:translateX(130px)}}@keyframes tw{50%{opacity:.2;transform:scale(.55)}}
+@media(max-width:560px){.tro{width:120px}.cols{gap:24px 14px}}
+
+/* ---- high-contrast palette: black / white / lime, gold for champions ---- */
+header{border-bottom:4px solid #b9a56a}
+header .nav button.on,header .nav button:hover{color:#fff}
+.logo b{-webkit-text-stroke:1.6px #fff}.logo:hover b{color:#fff}
+.hero small,.lead small,.nt small,.tag{color:var(--ac)}
+.card,.nt,.kpi,.hc,.tile{border-color:var(--bd)}
+.card h2,.nt h3{color:var(--tx)}
+th{color:var(--mu)}
+.bar button,.bar button.on,.gbtn,.gbtn.on{color:var(--tx)}
+.bar button.on,.gbtn.on,.bar button:hover,.gbtn:hover{color:var(--ac)}
+header .nav button,header .nav button.on{color:#aab4d8}header .nav button:hover,header .nav button.on{color:#fff}
+.blob{opacity:0;filter:blur(18px)}
+.nt{border-top-color:var(--ac)}
+.tile .p{color:var(--mu)}
+.lead h1{background:linear-gradient(100deg,var(--tx) 35%,var(--ac));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sc b,.kpi b{color:var(--tx)}
+.hdl{color:var(--ac)}
+
+.ic{display:inline-flex;width:30px;height:30px;color:var(--c);flex:none;align-items:center;justify-content:center}.ic svg,.ic .bird{width:100%;height:100%;display:block}
+.bird{background:url(data:image/png;base64,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) center/contain no-repeat;filter:brightness(0)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .bird{filter:none}}:root[data-theme=dark] .bird{filter:none}
+.big .ic{width:96px;height:96px}.tile .hm .ic{width:52px;height:52px}.pd1 .hm .ic{width:70px;height:70px}
+.dr:hover .ic svg,.dr:hover .ic .bird{filter:drop-shadow(0 0 8px var(--c))}
+
+/* ---- Hall of Champions: whole page turns marble cream ---- */
+body,header,footer{transition:background .45s,color .45s}
+body.hall-on{color-scheme:light;--bg:#f7f4ec;--card:#fff;--tx:#3a342a;--mu:#7a6f55;--bd:#e1dac8;--ac:#b8860b;background:radial-gradient(120% 90% at 50% 0,#fffdf8,#f1ebdc)}
+.hall-on .bgfx{display:none}
+.hall-on header{background:linear-gradient(110deg,#fffdf8,#f1ebdc);border-bottom:4px solid #d4af37;color:#3a342a}.hall-on header::before{display:none}
+.hall-on header p{color:#8a7a52}
+.hall-on .logo b{-webkit-text-stroke-color:#3a342a}.hall-on .logo:hover b{color:#3a342a;text-shadow:0 0 14px rgba(212,175,55,.7)}
+.hall-on .logo b:before{color:#d4af37}.hall-on .logo b:after{background:linear-gradient(90deg,#3a342a,#d4af37 70%,transparent)}
+.hall-on header .nav button,.hall-on header .nav button.on{--u:#b8860b;color:#7a6f55}.hall-on header .nav button:hover,.hall-on header .nav button.on{color:#3a342a}
+.hall-on .temple{background:none;border:0;box-shadow:none;padding:0 0 30px;margin-top:20px}
+.hall-on .ped{height:190px;box-shadow:none}.hall-on .ped b{font-size:26px}.hall-on .ped small{font-size:12px}
+.hall-on .tro{width:184px}.hall-on .cols{gap:40px 34px}
+.hall-on .ft{border-top-color:#e1dac8}.hall-on .sp:hover{color:#3a342a}
+
+.doors{display:flex;gap:28px;justify-content:center;margin:34px 0 0}
+.door{width:190px;height:140px;border:3px solid #cdbf98;border-bottom:0;border-radius:95px 95px 0 0;background:linear-gradient(#fff,#efe9d8);color:#3a342a;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:16px;cursor:pointer;font-family:inherit;transition:transform .25s,box-shadow .25s,border-color .25s,background .25s}
+.door b{font:900 italic 17px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;color:#8a6a10}.door small{font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#7a6f55;margin-top:3px}
+.door:hover{transform:translateY(-6px);border-color:#d4af37}.door.on{border-color:#d4af37;background:linear-gradient(#fffbe8,#f4e6b4);box-shadow:0 0 30px rgba(212,175,55,.5)}
+.hall-on.hall-5{background:radial-gradient(120% 90% at 50% 0,#fffaf0,#efe2c4)}.hall-on.hall-6{background:radial-gradient(120% 90% at 50% 0,#fbfdff,#e6ecf4)}
+.hall-6 .tro{width:226px}.hall-6 .cols{gap:46px 44px}
+@media(max-width:560px){.door{width:150px;height:118px}.hall-6 .tro{width:150px}}
+
+/* ---- embossed + glint gold ---- */
+.hero h1.gold-t,.gl .dr,tr.gold .dr,td.gold-t .dr,.tile.gold .nm,.tile.gold .p,.tile.gold .pt,.gl+.badge,.gx{background:linear-gradient(100deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) no-repeat -60% 0/250% 100%,linear-gradient(180deg,#fff3b8 0%,#f2cf5a 38%,#c99a1c 62%,#f7de86 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;animation:glint 5s ease-in-out infinite;filter:drop-shadow(0 -1px 0 rgba(255,250,210,.65)) drop-shadow(0 1.5px 0 #6b4e00) drop-shadow(0 3px 3px rgba(0,0,0,.5))}
+.gl .dr{font-size:24px;letter-spacing:1px}.gl+.badge{border-color:#d9b84a}.hero h1.gold-t{filter:drop-shadow(0 -1px 0 rgba(255,250,210,.7)) drop-shadow(0 2px 0 #6b4e00) drop-shadow(0 4px 5px rgba(0,0,0,.55)) drop-shadow(0 0 16px rgba(245,197,66,.4))}
+@keyframes glint{0%,45%{background-position:-60% 0,0 0}100%{background-position:160% 0,0 0}}
+td.gold-t{text-shadow:none}
+.vip{position:relative;width:100%;max-width:460px;margin:30px auto 18px;text-align:center}
+.vip:before{content:"";position:absolute;left:50%;top:52%;width:640px;height:640px;max-width:150vw;transform:translate(-50%,-50%);background:repeating-conic-gradient(from 0deg,rgba(212,175,55,.34) 0 5deg,transparent 5deg 15deg);-webkit-mask:radial-gradient(circle,#000 12%,transparent 66%);mask:radial-gradient(circle,#000 12%,transparent 66%);animation:spin 50s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.vip>*{position:relative}.vip .tro{width:290px;margin:0 auto;filter:drop-shadow(0 0 22px rgba(245,197,66,.55))}.vip .tro:hover{transform:translateY(-6px) scale(1.03)}
+.ribbon{display:inline-block;font:900 italic 15px Arial,sans-serif;text-transform:uppercase;letter-spacing:4px;margin-bottom:18px;padding:0 6px}
+.ribbon:before,.ribbon:after{content:"";display:inline-block;width:46px;height:2px;background:linear-gradient(90deg,transparent,#d4af37);vertical-align:middle;margin:0 14px}.ribbon:after{transform:scaleX(-1)}
+.vs{margin:14px 0 0;color:#7a6f55;font-weight:700;letter-spacing:.5px}.vs b{font:900 italic 26px Arial,sans-serif;margin-right:6px}
+.spk{position:absolute!important;width:16px;height:16px;background:radial-gradient(circle,#fff 10%,#f5d56a 60%);clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:tw2 2.6s ease-in-out infinite;pointer-events:none}
+@keyframes tw2{0%,100%{opacity:.15;transform:scale(.4)}50%{opacity:1;transform:scale(1.1)}}
+@media(max-width:560px){.vip .tro{width:220px}.ribbon{font-size:12px;letter-spacing:2px}.ribbon:before,.ribbon:after{width:22px;margin:0 8px}}
+
+/* ---- type + breathing room ---- */
+body{font-family:"Helvetica Neue",Arial,system-ui,sans-serif;font-size:16px;line-height:1.5}
+.about,.hero p,.lead p,.prog,.nt p,.vs,.fine{font-family:"Barlow","Helvetica Neue",Arial,sans-serif}
+.about{font-size:17px;line-height:1.8;max-width:68ch;margin-top:24px}
+.hero p,.lead p,.prog{font-size:17px;line-height:1.7}
+.nt{padding:30px 38px}.card{padding:28px 36px}.drv{padding:34px 42px}
+.nt td,.nt th{padding:13px 10px}.nt table{margin:0 -4px}
+.ng{gap:30px}
+.wr{display:grid;grid-template-columns:1fr auto;grid-template-areas:"n c" "b b";align-items:center;gap:8px 16px;margin:18px 0}
+.wr>.dr{grid-area:n}.wr>b{grid-area:c;font-size:18px}.wr>i{grid-area:b;width:auto}
+.pr{padding:11px 0;gap:18px}
+.st{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:16px 0;border-bottom:1px solid var(--bd)}.st:last-child{border-bottom:0;padding-bottom:4px}
+.sv{text-align:right;line-height:1}.sv b{display:block;font:900 italic 38px "Barlow Condensed",Arial,sans-serif;color:var(--tx)}.sv small{display:block;color:var(--mu);font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-top:6px}
+@media(max-width:560px){.nt,.card{padding:22px 22px}.drv{padding:24px 22px}}
+
+.cols{align-items:flex-end}.tro{position:relative}
+.vipt:before{content:"";position:absolute;left:50%;top:46%;width:400px;height:400px;transform:translate(-50%,-50%);background:repeating-conic-gradient(rgba(212,175,55,.32) 0 5deg,transparent 5deg 15deg);-webkit-mask:radial-gradient(circle,#000 10%,transparent 68%);mask:radial-gradient(circle,#000 10%,transparent 68%);animation:spin 50s linear infinite;pointer-events:none;z-index:0}
+.vipt>*{position:relative;z-index:1}.vipt>.spk{position:absolute}.vipt svg{filter:drop-shadow(0 0 16px rgba(245,197,66,.65))}
+.rb{font:900 italic 11px Arial,sans-serif;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;text-align:center}
+.vsn{display:block;font-size:10px;letter-spacing:1px;margin-top:3px;font-weight:900;text-transform:uppercase}
+
+.sec{font:900 italic 20px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;margin:44px 0 6px;padding-left:12px;border-left:5px solid var(--ac)}
+.recs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:26px;margin-top:20px}
+.rc2{background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--ac);border-radius:4px;padding:26px 30px;transition:transform .25s,box-shadow .25s}
+.rc2:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.rc2 small{color:var(--ac);font-weight:800;text-transform:uppercase;letter-spacing:1.2px;font-size:11px}
+.big2{font:900 italic 64px/1 Arial,sans-serif;margin:10px 0 2px}.rc2 .u{color:var(--mu);font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:14px}
+.hl{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-top:1px solid var(--bd)}.hl span{color:var(--mu);font-size:13px;font-family:"Barlow",Arial,sans-serif}
+.hl .on{font-style:normal;font-weight:900;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#4ade80;border:1px solid #4ade80;border-radius:999px;padding:1px 8px;align-self:flex-start;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.45}}
+.live{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4ade80;margin-right:9px;box-shadow:0 0 0 0 rgba(74,222,128,.7);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+.bs{color:var(--mu);font-size:11px;font-weight:700;margin-left:6px;letter-spacing:.5px}.prog.sm{font-size:13px;margin:-8px 0 8px}
+.wr b{white-space:nowrap}
+</style></head><body><div class="bgfx"></div>
+<header><div class="hrow"><div class="logo" role="button" tabindex="0" title="Home" aria-label="Go to home page" onclick="go('home');window.scrollTo(0,0)" onkeydown="if(event.key==='Enter'||event.key===' '){go('home');window.scrollTo(0,0)}"><b>LSC</b></div><div><h1>Limescale Cup</h1><p>World Championship · Forza Horizon 5 &amp; 6</p></div></div><nav class="bar nav" id="nav"></nav></header>
+<main><div class="games" id="scope"></div><div class="bar tabs" id="tabs"></div><div class="bar" id="seasons"></div><div id="out"></div></main>
+<footer><section class="ft"><h4>Our Partners</h4><div class="spons"><span class="sp s1">Torque&amp;Co</span><span class="sp s2">Apex Fuel</span><span class="sp s3">Nimbus Tyres</span><span class="sp s4">VORTEX//ENERGY</span><span class="sp s5">Halcyon Racewear</span><span class="sp s6">Brightline Motors</span></div></section>
+<section class="ft"><h4>Follow the Limescale Cup</h4><div class="soc"><div class="sc"><small>Instagram</small><b>4.8M</b><i>followers</i></div><div class="sc"><small>YouTube</small><b>6.2M</b><i>subscribers</i></div><div class="sc"><small>TikTok</small><b>9.1M</b><i>followers</i></div><div class="sc"><small>X</small><b>3.7M</b><i>followers</i></div><div class="sc"><small>Twitch</small><b>2.2M</b><i>followers</i></div></div><p class="hdl">@limescalecup on every platform</p></section>
+<p class="fine">© Limescale Cup World Championship · All sponsors and follower counts on this page are fictional · Not affiliated with Forza Horizon, Playground Games or Microsoft</p></footer>
+<script>
+const D={"FH6":[{"n":1,"done":true,"races":[["R1",["James","Toby","Mackenzie","Jack","AI"]],["R2",["Toby","James","Mackenzie","Jack","AI"]],["R3",["James","Toby","Jack","Mackenzie","AI"]],["R4",["James","Toby","Jack","Mackenzie","AI"]],["R5",["James","Jack","Toby","Mackenzie","AI"]],["Sprint",["James","Toby","Jack","AI","Mackenzie"]],["R6",["AI","Toby","James","Jack","Mackenzie"]],["R7",["James","AI","Toby","Jack","Mackenzie"]]],"drivers":[["James",170.5],["Toby",136],["Jack",103.5],["AI",99],["Mackenzie",91]],"teams":[["Mackenzie & James",261.5],["Toby & Jack",239.5]]},{"n":2,"done":true,"races":[["R1",["Toby","Mackenzie","James","Jack","AI"]],["R2",["Toby","James","Mackenzie","AI","Jack"]],["R3",["James","Toby","Mackenzie","Jack","AI"]],["Sprint",["AI","James","Mackenzie","Jack","Toby"]],["R4",["Toby","AI","Jack","James","Mackenzie"]],["R5",["James","Mackenzie","AI","Jack","Toby"]],["R6",["AI","James","Mackenzie","Jack","Toby"]],["R7",["James","AI","Jack","Toby","Mackenzie"]]],"drivers":[["James",147],["Toby",130],["AI",120.5],["Mackenzie",108.5],["Jack",94]],"teams":[["Mackenzie & James",14],["Toby & Jack",7]]},{"n":3,"done":true,"races":[["R1",["James","Mackenzie","Toby","Jack","AI"]],["R2",["Jack","Toby","James","AI","Mackenzie"]],["R3",["Jack","James","Toby","Mackenzie","AI"]],["Sprint",["AI","Jack","Toby","James","Mackenzie"]],["R4",["James","Jack","Toby","Mackenzie","AI"]],["R5",["Jack","AI","Toby","James","Mackenzie"]],["R6",["Jack","Toby","AI","Mackenzie","James"]],["R7",["AI","Jack","Toby","James","Mackenzie"]]],"drivers":[["Jack",157],["James",123],["Toby",118.5],["AI",112.5],["Mackenzie",89]],"teams":[["James & Toby",10],["Mackenzie & Jack",9]]},{"n":4,"done":true,"races":[["R1",["Toby","AI","Mackenzie","Jack","James"]],["R2",["Jack","James","Mackenzie","Toby","AI"]],["R3",["James","AI","Toby","Jack","Mackenzie"]],["Sprint",["AI","James","Toby","Jack","Mackenzie"]],["R4",["Toby","Jack","James","AI","Mackenzie"]],["R5",["Jack","Toby","Mackenzie","James","AI"]],["R6",["Toby","James","AI","Mackenzie","Jack"]],["R7",["Toby","James","Jack","AI","Mackenzie"]]],"drivers":[["Toby",152.5],["James",125],["Jack",123],["AI",107.5],["Mackenzie",92]],"teams":[["James & Toby",17],["Jack & Mackenzie",6]]},{"n":5,"done":true,"races":[["R1",["AI","James","Toby","Jack","Mackenzie"]],["R2",["Toby","Mackenzie","Jack","James","AI"]],["R3",["James","Jack","Toby","Mackenzie","AI"]],["R4",["James","Toby","Mackenzie","Jack","AI"]],["Sprint",["James","Toby","AI","Mackenzie","Jack"]],["R5",["James","Toby","Mackenzie","Jack","AI"]],["R6",["AI","Toby","Mackenzie","Jack","James"]],["R7",["Toby","AI","James","Jack","Mackenzie"]]],"drivers":[["Toby",143],["James",142.5],["AI",115.5],["Mackenzie",101],["Jack",98]],"teams":[["Mackenzie & Toby",11],["Jack & James",9]]},{"n":6,"done":true,"races":[["R1",["Toby","Jack","AI","Mackenzie","James"]],["R2",["AI","Jack","Toby","Mackenzie","James"]],["R3",["Toby","Jack","Mackenzie","AI","James"]],["Sprint",["Jack","AI","Toby","Mackenzie","James"]],["R4",["Toby","AI","Jack","Mackenzie","James"]],["R5",["Toby","Jack","Mackenzie","AI","James"]],["R6",["Toby","AI","Jack","Mackenzie","James"]],["R7",["Jack","AI","Toby","Mackenzie","James"]]],"drivers":[["Toby",162.5],["Jack",139.5],["AI",127],["Mackenzie",96],["James",75]],"teams":[["Mackenzie & Jack",11],["Toby & James",8]]},{"n":7,"done":true,"races":[["R1",["James","Toby","Jack","AI","Mackenzie"]],["R2",["Toby","James","Jack","AI","Mackenzie"]],["R3",["Jack","Toby","James","Mackenzie","AI"]],["R4",["Toby","Jack","James","AI","Mackenzie"]],["Sprint",["AI","Toby","Jack","James","Mackenzie"]],["R5",["Jack","James","Toby","Mackenzie","AI"]],["R6",["Jack","Toby","James","AI","Mackenzie"]],["R7",["Jack","Toby","AI","James","Mackenzie"]]],"drivers":[["Jack",155.5],["Toby",146],["James",124],["AI",95.5],["Mackenzie",79]],"teams":[["Jack & James",14],["Toby & Mackenzie",7]]},{"n":8,"done":true,"races":[["R1",["Toby","AI","James","Jack","Mackenzie"]],["R2",["Jack","Toby","AI","Mackenzie","James"]],["R3",["James","Toby","Mackenzie","Jack","AI"]],["R4",["Toby","Jack","Mackenzie","James","AI"]],["Sprint",["Jack","James","Toby","Mackenzie","AI"]],["R5",["Jack","Toby","Mackenzie","AI","James"]],["R6",["Jack","Toby","AI","Mackenzie","James"]],["R7",["Jack","AI","Mackenzie","Toby","James"]]],"drivers":[["Jack",154.5],["Toby",141.5],["AI",103],["James",101],["Mackenzie",100]],"teams":[["Toby & Jack",19],["James & Mackenzie",5]]},{"n":9,"done":true,"races":[["R1",["Toby","AI","Jack","Mackenzie","James"]],["R2",["Jack","Toby","Mackenzie","James","AI"]],["R3",["Toby","Jack","Mackenzie","James","AI"]],["R4",["Toby","Jack","James","Mackenzie","AI"]],["Sprint",["Jack","AI","Mackenzie","James","Toby"]],["R5",["Toby","Jack","James","Mackenzie","AI"]],["R6",["AI","Jack","Mackenzie","James","Toby"]],["R7",["Jack","AI","Toby","Mackenzie","James"]]],"drivers":[["Jack",149.5],["Toby",148],["AI",110],["Mackenzie",100.5],["James",92]],"teams":[["Jack & Mackenzie",14],["Toby & James",8]]},{"n":10,"done":true,"races":[["R1",["James","Toby","AI","Jack","Mackenzie"]],["R2",["James","Mackenzie","Toby","Jack","AI"]],["R3",["Toby","James","Jack","AI","Mackenzie"]],["R4",["James","Toby","AI","Jack","Mackenzie"]],["Sprint",["James","Jack","AI","Toby","Mackenzie"]],["R5",["James","Toby","Jack","AI","Mackenzie"]],["R6",["James","Mackenzie","AI","Jack","Toby"]],["R7",["James","AI","Jack","Toby","Mackenzie"]]],"drivers":[["James",180.5],["Toby",122],["AI",104.5],["Jack",102],["Mackenzie",91]],"teams":[["James & Jack",16],["Toby & Mackenzie",6]]},{"n":11,"done":true,"races":[["R1",["James","Mackenzie","Jack","AI","Toby"]],["R2",["Jack","James","AI","Toby","Mackenzie"]],["R3",["James","AI","Jack","Mackenzie","Toby"]],["R4",["James","Jack","AI","Toby","Mackenzie"]],["Sprint",["AI","Toby","Jack","James","Mackenzie"]],["R5",["James","Jack","Mackenzie","AI","Toby"]],["R6",["Toby","AI","Jack","Mackenzie","James"]],["R7",["Jack","AI","Mackenzie","Toby","James"]]],"drivers":[["James",144],["Jack",138.5],["AI",120.5],["Toby",100],["Mackenzie",97]],"teams":[["Toby & Jack",13],["James & Mackenzie",10]]}],"FH5":[{"n":1,"done":true,"races":[["R1",["Toby","Jack","James","AI","Mackenzie"]],["R2",["AI","Toby","Jack","James","Mackenzie"]],["R3",["James","Toby","Jack","Mackenzie","AI"]],["R4",["AI","Mackenzie","James","Jack","Toby"]],["R5",["James","Jack","AI","Toby","Mackenzie"]]],"drivers":[["James",95],["AI",87],["Jack",81],["Toby",75],["Mackenzie",62]],"teams":[]},{"n":2,"done":true,"races":[["R1",["James","Jack","Toby","AI","Mackenzie"]],["R2",["Toby","James","AI","Jack","Mackenzie"]],["R3",["AI","Toby","James","Jack","Mackenzie"]],["R4",["Toby","Jack","Mackenzie","James","AI"]],["R5",["Toby","James","AI","Jack","Mackenzie"]]],"drivers":[["Toby",108],["James",88],["AI",77],["Jack",72],["Mackenzie",55]],"teams":[]},{"n":3,"done":true,"races":[["R1",["Toby","Jack","James","AI","Mackenzie"]],["R2",["Toby","Jack","James","Mackenzie","AI"]],["R3",["Jack","James","Mackenzie","AI","Toby"]],["R4",["Jack","Toby","James","Mackenzie","AI"]],["R5",["Jack","Toby","James","AI","Mackenzie"]],["R6",["Toby","Jack","James","Mackenzie","AI"]],["R7",["Jack","James","AI","Mackenzie","Toby"]]],"drivers":[["Jack",154],["Toby",131],["James",111],["Mackenzie",83],["AI",81]],"teams":[]},{"n":4,"done":true,"races":[["R1",["Toby","Jack","Mackenzie","James","AI"]],["R2",["James","AI","Toby","Mackenzie","Jack"]],["R3",["Jack","Toby","AI","James","Mackenzie"]],["R4",["Jack","James","AI","Toby","Mackenzie"]],["R5",["Jack","AI","Toby","James","Mackenzie"]],["R6",["AI","Toby","Jack","Mackenzie","James"]],["R7",["Jack","Toby","AI","James","Mackenzie"]]],"drivers":[["Jack",143],["Toby",121],["AI",116],["James",101],["Mackenzie",79]],"teams":[]},{"n":5,"done":true,"races":[["R1",["Toby","Jack","Mackenzie","James","AI","Jacob"]],["R2",["AI","Jack","Toby","James","Mackenzie","Jacob"]],["Sprint",["Jack","Toby","AI","James","Mackenzie","Jacob"]],["R3",["Toby","Jack","Mackenzie","AI","James","Jacob"]],["R4",["James","Toby","Jack","Mackenzie","AI","Jacob","Creamo"]],["R5",["Toby","Jack","James","AI","Mackenzie","Jacob","Creamo"]],["R6",["Jack","Toby","AI","James","Mackenzie","Creamo","Jacob"]],["R7",["Toby","Jack","James","AI","Mackenzie","Creamo","Jacob"]]],"drivers":[["Toby",160],["Jack",142.5],["James",107],["AI",103.5],["Mackenzie",87]],"teams":[]},{"n":6,"done":true,"races":[["R1",["Toby","Jack","Mackenzie","Creamo","AI","James"]],["R2",["James","AI","Jack","Toby","Mackenzie","Creamo"]],["R3",["Jack","Toby","Mackenzie","James","AI","Creamo"]],["R4",["Jack","James","Creamo","AI","Mackenzie","Toby"]],["R5",["Toby","Mackenzie","AI","Jack","James","Creamo"]],["R6",["Toby","Jack","Mackenzie","AI","James","Creamo"]],["R7",["Toby","AI","Jack","James","Creamo","Mackenzie"]]],"drivers":[["Toby",138],["Jack",128],["AI",95],["James",94],["Mackenzie",91]],"teams":[]},{"n":7,"done":true,"races":[["R1",["Toby","Jack","Mackenzie","James","AI","Creamo"]],["R2",["Toby","James","Jack","Creamo","AI","Mackenzie"]],["R3",["AI","Mackenzie","Toby","James","Jack","Creamo"]],["R4",["Jack","Toby","AI","Mackenzie","James","Creamo"]],["R5",["Jack","Toby","Mackenzie","AI","Creamo","James"]],["R6",["Jack","Toby","James","Mackenzie","AI"]],["R7",["James","Jack","Toby","AI","Mackenzie"]]],"drivers":[["Jack",135],["Toby",134],["James",100],["AI",94],["Mackenzie",90]],"teams":[]},{"n":8,"done":true,"races":[["R1",["Toby","Jack","Mackenzie","James","AI"]],["R2",["Toby","Jack","AI","James","Mackenzie"]],["R3",["Jack","Toby","James","AI","Mackenzie"]],["Sprint",["Jack","AI","Toby","James","Mackenzie"]],["R4",["Toby","Mackenzie","AI","James","Jack"]],["R5",["Jack","Toby","Mackenzie","AI","James"]],["R6",["Jack","Toby","AI","Mackenzie","James"]],["R7",["James","Jack","AI","Toby","Mackenzie"]]],"drivers":[["Jack",151.5],["Toby",148.5],["AI",103],["Mackenzie",95],["James",92]],"teams":[]},{"n":9,"done":true,"races":[["R1",["Toby","James","Jack","Mackenzie","AI"]],["R2",["Toby","Jack","James","Mackenzie","AI"]],["R3",["James","Toby","Jack","AI","Mackenzie"]],["Sprint",["James","Jack","Toby","AI","Mackenzie"]],["R4",["James","Mackenzie","Toby","Jack","AI"]],["R5",["James","Mackenzie","Toby","Jack","AI"]],["R6",["James","Mackenzie","Toby","Jack","AI"]],["R7",["AI","Jack","Toby","Mackenzie","James"]],["R8",["Jack","Toby","AI","James","Mackenzie"]]],"drivers":[["James",167.5],["Toby",153.5],["Jack",136],["Mackenzie",115],["AI",111]],"teams":[]},{"n":10,"done":true,"races":[["R1",["Toby","Mackenzie","Jack","James","AI"]],["R2",["Toby","James","Jack","Mackenzie","AI"]],["R3",["Toby","Jack","James","AI","Mackenzie"]],["Sprint",["Mackenzie","James","Toby","AI","Jack"]],["R4",["Mackenzie","Jack","James","Toby","AI"]],["R5",["Mackenzie","Toby","Jack","James","AI"]],["R6",["Toby","Mackenzie","Jack","AI","James"]],["R7",["Mackenzie","James","AI","Toby","Jack"]],["R8",["James","Toby","AI","Mackenzie","Jack"]]],"drivers":[["Toby",167.5],["Mackenzie",157.5],["James",134],["Jack",121],["AI",100]],"teams":[]},{"n":11,"done":true,"races":[["R1",["James","Jack","AI","Mackenzie","Toby"]],["R2",["James","Jack","Mackenzie","AI","Toby"]],["Sprint",["Mackenzie","Jack","James","Toby","AI"]],["R3",["Mackenzie","Toby","Jack","James","AI"]],["R4",["Jack","Toby","James","Mackenzie","AI"]],["R5",["Mackenzie","Jack","James","Toby","AI"]],["R6",["Toby","AI","Jack","James","Mackenzie"]],["R7",["Mackenzie","Toby","AI","Jack","James"]]],"drivers":[["Mackenzie",136.5],["Jack",130],["James",121.5],["Toby",117],["AI",96]],"teams":[]},{"n":12,"done":true,"races":[["R1",["Jack","James","Toby","Mackenzie","AI"]],["R2",["James","Toby","Jack","Mackenzie","AI"]],["R3",["Toby","James","Jack","Mackenzie","AI"]],["Sprint",["James","Toby","Jack","AI","Mackenzie"]],["R4",["James","Toby","Jack","Mackenzie","AI"]],["R5",["Toby","James","Jack","Mackenzie","AI"]],["R6",["Jack","AI","James","Toby","Mackenzie"]],["R7",["Jack","AI","James","Toby","Mackenzie"]]],"drivers":[["James",146.5],["Jack",142.5],["Toby",134],["AI",92],["Mackenzie",85]],"teams":[]},{"n":13,"done":true,"races":[["R1",["Jack","Toby","James","Mackenzie","AI"]],["R2",["Toby","Jack","James","Mackenzie","AI"]],["R3",["Toby","Jack","AI","James","Mackenzie"]],["Sprint",["Toby","AI","James","Jack","Mackenzie"]],["R4",["Jack","James","Toby","Mackenzie","AI"]],["R5",["Jack","Toby","James","AI","Mackenzie"]],["R6",["Jack","AI","Toby","James","Mackenzie"]],["R7",["Jack","Toby","AI","James","Mackenzie"]]],"drivers":[["Jack",167],["Toby",146.5],["James",106.5],["AI",99],["Mackenzie",81]],"teams":[]},{"n":14,"done":true,"races":[["R1",["Jack","James","Toby","Mackenzie","AI"]],["R2",["Toby","Jack","James","Mackenzie","AI"]],["R3",["James","Toby","Jack","Mackenzie","AI"]],["Sprint",["Jack","James","AI","Toby","Mackenzie"]],["R4",["Jack","Toby","James","Mackenzie","AI"]],["R5",["Toby","Jack","AI","James","Mackenzie"]],["R6",["Jack","AI","Toby","James","Mackenzie"]],["R7",["Toby","AI","James","Jack","Mackenzie"]]],"drivers":[["Jack",150.5],["Toby",147],["James",121],["AI",98.5],["Mackenzie",83]],"teams":[]}],"bio":{"Toby":{"tag":"Mr Consistent","about":"The most reliable driver on the grid. Toby has the most race wins and podiums, the best average finishing position, and holds the record podium streak. He has also finished runner-up more often than anyone, so his title count undersells him."},"Jack":{"tag":"The Title Collector","about":"More drivers\u2019 titles than anyone, and at his best when it counts: he owns the most season-finale wins and the joint-longest winning streak. Second only to James on team titles."},"James":{"tag":"Boom or Bust","about":"The league\u2019s team-title king. When he is on, nobody touches him: FH6 Season 1 is the highest points share in league history. When he is off, he is really off, finishing last in every race of FH6 Season 6."},"Mackenzie":{"nick":"Ken","tag":"The Underdog","about":"One drivers\u2019 title, won in FH5 Season 11 straight after a runner-up finish. All of his race wins came in those two seasons. A multiple team champion who is still hunting a first FH6 win."},"AI":{"tag":"The Wildcard","about":"Not one of the friends, but a genuine threat. The AI has no title yet, yet it has won at least one race in every FH6 season and keeps spoiling the party at the front."}},"fh5Team":{"James":6,"Jack":7,"Mackenzie":3,"Toby":2,"AI":2}};
+const COL={James:'#2f6fed',Toby:'#22b8cf',Jack:'#e03131',Mackenzie:'#a46bff',AI:'#6b7280'};
+const IC={
+Jack:`<svg viewBox="0 0 48 48"><polygon points="24,1 30,8 38,4 37,13 45,16 41,24 46,32 38,34 36,43 28,39 24,47 20,39 12,43 10,34 2,32 7,24 3,16 11,13 10,4 18,8" fill="currentColor"/><path d="M24 1L30 8L24 15ZM45 16L41 24L35 17ZM46 32L38 34L40 26ZM24 47L28 39L20 39ZM2 32L10 34L8 26ZM3 16L11 13L13 19Z" fill="#000" opacity=".22"/><polygon points="14,14 34,14 38,26 30,40 24,44 18,40 10,26" fill="#fff" opacity=".96"/><polygon points="14,14 24,14 24,44 18,40 10,26" fill="#000" opacity=".07"/><path d="M13 22L22 25L15 28ZM35 22L26 25L33 28Z" fill="currentColor"/><path d="M12 19L22 22M36 19L26 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M21 31h6l-3 4.5Z" fill="currentColor"/><path d="M24 35.5V38M18.5 38.5L24 38l5.5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+James:`<svg viewBox="0 0 48 48"><g transform="translate(24 24) scale(.92) translate(-27 -28.8)"><path fill-rule="evenodd" fill="currentColor" d="M4.7 41.4L5.1 41.7L5.6 42.1L6.1 42.7L6.7 43.3L7.3 43.9L8.0 44.5L8.8 45.2L9.7 45.8L10.6 46.3L11.7 46.7L12.7 47.1L13.9 47.4L15.1 47.6L16.3 47.9L17.6 48.0L18.9 48.2L20.2 48.3L21.6 48.3L22.9 48.4L24.1 48.4L25.4 48.3L26.7 48.3L28.1 48.2L29.4 48.1L30.8 47.9L32.1 47.7L33.5 47.5L34.7 47.2L36.0 46.8L37.1 46.3L38.2 45.8L39.3 45.2L40.3 44.5L41.3 43.7L42.1 42.9L42.9 42.1L43.7 41.1L44.3 40.1L44.7 39.0L45.0 37.8L45.0 36.5L44.8 35.4L44.5 34.3L43.9 33.2L43.3 32.2L42.5 31.3L41.5 30.5L40.5 29.7L39.3 29.1L38.0 28.5L36.5 28.1L34.9 27.9L33.2 27.8L31.5 27.8L29.9 27.8L28.2 27.8L26.6 27.8L25.1 27.7L23.8 27.6L22.7 27.4L21.5 27.1L20.3 26.8L19.0 26.4L17.8 25.9L16.7 25.4L15.7 25.0L14.8 24.5L14.1 24.1L13.6 23.7L13.5 23.6L13.5 23.6L13.6 23.7L13.6 23.7L13.6 23.6L13.7 23.3L13.8 22.9L14.1 22.6L14.3 22.2L14.6 22.0L14.8 21.8L14.9 21.7L15.2 21.6L15.8 21.5L16.6 21.4L17.5 21.3L18.5 21.2L19.5 21.1L20.6 21.0L21.7 20.9L22.8 20.7L23.7 20.4L24.6 20.1L25.4 19.8L26.2 19.5L26.9 19.2L27.6 18.8L28.3 18.5L28.9 18.2L29.4 18.0L29.9 17.8L30.5 17.5L31.0 17.3L31.5 17.2L32.0 17.0L32.5 16.8L33.0 16.6L33.4 16.5L33.9 16.3L34.3 16.2L34.6 16.1L34.8 16.9L40.2 15.1L44.2 11.4L44.0 10.6L38.7 9.3L33.2 10.3L33.4 11.1L33.0 11.2L32.6 11.3L32.1 11.3L31.6 11.4L31.1 11.5L30.5 11.6L30.0 11.8L29.4 11.9L28.7 12.1L28.1 12.2L27.4 12.4L26.7 12.7L26.0 12.9L25.3 13.2L24.6 13.4L23.9 13.7L23.2 13.9L22.5 14.1L21.9 14.4L21.2 14.5L20.6 14.7L19.8 14.8L18.9 14.9L18.0 14.9L16.9 15.0L15.8 15.1L14.7 15.3L13.5 15.6L12.4 16.0L11.2 16.6L10.3 17.3L9.6 18.1L8.9 19.0L8.3 20.0L7.8 21.0L7.5 22.1L7.3 23.4L7.3 24.8L7.8 26.2L8.5 27.4L9.5 28.4L10.5 29.2L11.6 29.9L12.9 30.6L14.2 31.2L15.5 31.8L17.0 32.3L18.4 32.8L19.9 33.2L21.3 33.6L23.0 33.9L24.7 34.0L26.5 34.1L28.2 34.1L29.9 34.1L31.5 34.1L33.0 34.1L34.3 34.2L35.3 34.3L36.0 34.5L36.6 34.7L37.1 35.0L37.6 35.4L38.0 35.7L38.4 36.1L38.6 36.4L38.8 36.7L38.9 37.0L39.0 37.2L39.0 37.2L39.0 37.3L38.9 37.5L38.7 38.0L38.4 38.5L38.0 39.0L37.5 39.6L36.9 40.2L36.2 40.7L35.5 41.2L34.9 41.7L34.1 42.0L33.2 42.4L32.2 42.8L31.1 43.1L30.0 43.4L28.8 43.6L27.5 43.9L26.3 44.1L25.1 44.3L23.9 44.4L22.7 44.6L21.5 44.7L20.3 44.8L19.0 44.8L17.8 44.8L16.6 44.8L15.4 44.8L14.3 44.7L13.3 44.6L12.3 44.5L11.5 44.2L10.7 43.9L9.9 43.5L9.1 43.1L8.3 42.6L7.6 42.1L6.9 41.7L6.3 41.2L5.7 40.9L5.3 40.6ZM9.8 44.7L8.0 44.6L7.3 42.9L9.1 43.0ZM16.9 46.4L15.1 47.3L13.6 46.0L15.4 45.1ZM25.8 46.3L24.1 47.6L22.2 46.5L23.9 45.2ZM34.8 44.6L33.2 46.4L30.9 45.6L32.5 43.8ZM41.0 40.2L40.3 42.7L37.8 43.2L38.4 40.6ZM41.7 34.5L43.6 36.7L42.2 39.2L40.4 37.0ZM36.7 31.0L39.7 30.9L41.0 33.7L37.9 33.8ZM27.2 31.0L29.9 29.1L32.6 30.9L29.9 32.7ZM16.8 29.0L19.9 28.1L21.9 30.6L18.8 31.5ZM9.5 24.3L12.7 24.7L13.6 27.9L10.4 27.4ZM12.3 19.1L12.7 22.3L9.8 23.8L9.5 20.6ZM17.9 17.9L15.6 20.2L12.6 18.9L14.9 16.6ZM24.6 17.0L22.4 19.3L19.4 18.2L21.6 15.9ZM29.6 14.7L27.8 17.4L24.6 16.7L26.4 14.1ZM38.8 13.7a.8 .8 0 1 0 1.6 0a.8 .8 0 1 0-1.6 0Z"/><path d="M44.1 11.0L47.0 10.3L49.1 11.3L47.3 10.5Z M44.1 11.0L47.0 10.3L48.4 8.4L47.1 10.0Z" fill="currentColor" opacity=".9"/></g></svg>`,
+Mackenzie:`<svg viewBox="0 0 48 48"><path d="M4 4l15 11h10L44 4l3 22-23 20L1 26Z" fill="currentColor"/><path d="M8 10l8 7-6 4ZM40 10l-8 7 6 4Z" fill="#fff" opacity=".35"/><path d="M24 45L11 28l13-4 13 4Z" fill="#fff" opacity=".92"/><path d="M11 21l8 2-3.5 3.5ZM37 21l-8 2 3.5 3.5Z" fill="#fff"/><circle cx="24" cy="43" r="2" fill="currentColor"/></svg>`};
+const hel=n=>{const c=COL[n]||'#8a94a3';return n=='AI'?`<span class="num" style="--c:${c}">41</span>`:`<span class="ic" style="--c:${c}">${n=='Toby'?'<span class="bird"></span>':(IC[n]||'')}</span>`};
+const chip=n=>`<span class="dr">${hel(n)}${n}</span>`;
+const f1=x=>(Math.round(x*10)/10).toString();
+let tab='now',scope='FH6',sn=null;
+const last=g=>D[g][D[g].length-1];
+function setTab(t){tab=t;sn=null;draw()}
+function setScope(s){scope=s;if(s=='Both')tab='all';sn=null;draw()}
+function drawChamp(){
+ document.getElementById('tabs').innerHTML=[['now','Standings & results'],['hist','Season history'],['all','All-time records']].filter(([k])=>scope!='Both'||k=='all').map(([k,l])=>`<button class="${tab==k?'on':''}" onclick="setTab('${k}')">${l}</button>`).join('');
+ const G=[['FH6','Forza Horizon 6',D.FH6.length+' seasons'],['FH5','Forza Horizon 5',D.FH5.length+' seasons'],['Both','All-time','both games']];
+ document.getElementById('scope').innerHTML=G.map(g=>`<button class="gbtn${scope==g[0]?' on':''}" onclick="setScope('${g[0]}')"><small>${g[2]}</small><b>${g[1]}</b></button>`).join('');
+ const el=document.getElementById('seasons');
+ if(tab=='now'){const L=D[scope];if(sn==null)sn=L[L.length-1].n;
+  el.innerHTML=L.map(s=>`<button class="${s.n==sn?'on':''}" onclick="sn=${s.n};draw()">S${s.n}</button>`).join('')}else el.innerHTML='';
+ document.getElementById('out').innerHTML=tab=='now'?now():tab=='hist'?hist():all();
+}
+function now(){
+ const s=D[scope].find(x=>x.n==sn),top=s.drivers[0][1]||1;
+ const status=s.done?`Champion: ${chip(s.drivers[0][0])}<span class="badge">CHAMPION</span>`:`<span class="prog">In progress · leading: </span>${chip(s.drivers[0][0])}`;
+ let h=`<div class="hero"><small>${scope} · Season ${s.n}</small><h1 class="${s.done?'gold-t':''}">${s.done?'🏆 Champion':'Championship leader'}</h1><span class="${s.done?'gl':''}">${chip(s.drivers[0][0])}</span>${s.done?'<span class="badge">Champion</span>':'<span class="badge">In progress</span>'}</div><div class="pod">${[1,0,2].map(i=>{const d=s.drivers[i];return `<div class="tile pd${i+1}${i==0&&s.done?' gold':''}" style="--c:${COL[d[0]]||'#8a94a3'}"><span class="hm">${hel(d[0])}</span><span class="p">${i+1}</span><span class="nm">${d[0]}</span><span class="pt">${f1(d[1])} <small>PTS</small></span></div>`}).join('')}</div><div class="grid"><div class="card"><h2>Drivers’ standings</h2><table>`+
+  s.drivers.map((d,i)=>`<tr class="${i==0&&s.done?'gold':''}"><td class="pos">${i+1}</td><td>${chip(d[0])}<div class="bar2"><i style="width:${d[1]/top*100}%;background:${COL[d[0]]||'#8a94a3'}"></i></div></td><td class="n"><b>${f1(d[1])}</b></td></tr>`).join('')+`</table></div>`;
+ h+=s.teams.length?`<div class="card"><h2>Teams’ standings</h2><table>`+s.teams.map((t,i)=>`<tr class="${i==0&&s.done?'gold':''}"><td class="pos">${i+1}</td><td>${t[0].split(' & ').map(chip).join(' ')}</td><td class="n"><b>${f1(t[1])}</b>${i==0&&s.done?'<span class="badge">CHAMPIONS</span>':''}</td></tr>`).join('')+`</table></div>`:`<div class="card"><h2>Teams</h2><span class="prog">Team results are not tracked for this game.</span></div>`;
+ h+=`</div><div class="card"><h2>Race results</h2><div class="sx"><table><tr><th>Race</th><th>1st</th><th>2nd</th><th>3rd</th><th>4th</th><th>5th</th></tr>`+
+  s.races.map(r=>`<tr><td><b>${r[0]}</b></td>${r[1].slice(0,5).map(n=>`<td>${chip(n)}</td>`).join('')}</tr>`).join('')+`</table></div></div>`;
+ return h}
+function hist(){
+ const rows=D[scope].filter(s=>s.done).map(s=>{const d=s.drivers;return `<tr><td><b>S${s.n}</b></td><td class="gold-t">🏆 ${chip(d[0][0])}</td><td class="n">${f1(d[0][1])}</td><td>${chip(d[1][0])}</td><td class="n">${f1(d[1][1])}</td><td>${s.teams.length?s.teams[0][0].split(' & ').map(chip).join(' '):'–'}</td></tr>`}).join('');
+ return `<div class="card"><h2>${scope} season champions</h2><div class="sx"><table><tr><th>Season</th><th>Champion</th><th class="n">Pts</th><th>Runner-up</th><th class="n">Pts</th><th>Team champions</th></tr>${rows}</table></div></div>`}
+function all(){
+ const gs=scope=='Both'?['FH6','FH5']:[scope],St={};
+ const ds=['James','Toby','Jack','Mackenzie','AI'];ds.forEach(d=>St[d]={t:0,tt:0,w:0,p:0,n:0,pos:0,pts:0});
+ gs.forEach(g=>D[g].forEach(s=>{
+  if(s.done)St[s.drivers[0][0]].t++;
+  if(g=='FH6'&&s.done&&s.teams.length)s.teams[0][0].split(' & ').forEach(n=>{if(St[n])St[n].tt++});
+  s.drivers.forEach(d=>{if(St[d[0]])St[d[0]].pts+=d[1]});
+  s.races.forEach(r=>{r[1].forEach((n,i)=>{if(St[n]&&i<5){St[n].n++;St[n].pos+=i+1;if(i==0)St[n].w++;if(i<3)St[n].p++}})})}));
+ if(gs.includes('FH5'))ds.forEach(d=>St[d].tt+=D.fh5Team[d]||0);
+ const rows=ds.sort((a,b)=>St[b].t-St[a].t||St[b].w-St[a].w).map(d=>{const x=St[d];return `<tr><td>${chip(d)}</td><td class="n"><b>${x.t}</b></td><td class="n">${x.tt}</td><td class="n">${x.w}</td><td class="n">${x.p}</td><td class="n">${(100*x.w/x.n).toFixed(0)}%</td><td class="n">${(x.pos/x.n).toFixed(2)}</td><td class="n">${f1(x.pts)}</td></tr>`}).join('');
+ const nr=gs.reduce((a,g)=>a+D[g].reduce((b,s)=>b+s.races.length,0),0),ns=gs.reduce((a,g)=>a+D[g].length,0);
+ return `<div class="card"><h2>All-time records · ${scope=='Both'?'both games':scope}</h2><div class="prog" style="margin-bottom:8px">${ns} seasons · ${nr} races</div><div class="sx"><table><tr><th>Driver</th><th class="n">Titles</th><th class="n">Team titles</th><th class="n">Wins</th><th class="n">Podiums</th><th class="n">Win %</th><th class="n">Avg finish</th><th class="n">Points</th></tr>${rows}</table></div></div>`}
+let page='home';const NAV=[['home','Home'],['champ','Championship'],['drivers','Drivers'],['stats','Live Stats'],['hall','Hall of Champions']];
+function go(p){page=p;draw()}
+function draw(){
+ document.body.classList.toggle('hall-on',page=='hall');document.body.classList.toggle('hall-5',page=='hall'&&room=='FH5');document.body.classList.toggle('hall-6',page=='hall'&&room=='FH6');
+ document.getElementById('nav').innerHTML=NAV.map(([k,l])=>`<button class="${page==k?'on':''}" onclick="go('${k}')">${l}</button>`).join('');
+ const c=page=='champ';['scope','tabs','seasons'].forEach(i=>document.getElementById(i).style.display=c?'':'none');
+ if(c)return drawChamp();
+ document.getElementById('out').innerHTML=page=='home'?home():page=='hall'?hall():page=='stats'?statsPage():drivers();
+}
+function stats(gs){
+ const ds=['James','Toby','Jack','Mackenzie','AI'],St={},cw={},cp={};
+ ds.forEach(d=>{St[d]={t:0,tt:0,w:0,p:0,n:0,pos:0,bw:0,bp:0};cw[d]=0;cp[d]=0});
+ gs.forEach(g=>D[g].forEach(s=>{
+  if(s.done)St[s.drivers[0][0]].t++;
+  if(g=='FH6'&&s.done&&s.teams.length)s.teams[0][0].split(' & ').forEach(n=>{if(St[n])St[n].tt++});
+  s.races.forEach(r=>{const o=r[1];ds.forEach(d=>{const i=o.indexOf(d);if(i<0||i>4)return;const x=St[d];x.n++;x.pos+=i+1;if(i==0)x.w++;if(i<3)x.p++;
+   cw[d]=i==0?cw[d]+1:0;cp[d]=i<3?cp[d]+1:0;x.bw=Math.max(x.bw,cw[d]);x.bp=Math.max(x.bp,cp[d])})})}));
+ if(gs.includes('FH5'))ds.forEach(d=>St[d].tt+=D.fh5Team[d]||0);
+ ds.forEach(d=>{St[d].cw=cw[d];St[d].cp=cp[d]});return St}
+const kp=a=>`<div class="kpis">${a.map(x=>`<div class="kpi"><b>${x[0]}</b><small>${x[1]}</small></div>`).join('')}</div>`;
+function home(){
+ const St=stats(['FH5','FH6']),s=D.FH6[D.FH6.length-1],d0=s.drivers[0],d1=s.drivers[1],m=d0[1]-d1[1],wins={};
+ s.races.forEach(r=>wins[r[1][0]]=(wins[r[1][0]]||0)+1);
+ const wl=Object.entries(wins).sort((a,b)=>b[1]-a[1]),lr=s.races[s.races.length-1];
+ const by=k=>Object.keys(St).sort((a,b)=>St[b][k]-St[a][k])[0],sw=by('cw'),sp=by('cp');
+ const ts=Object.keys(St).sort((a,b)=>St[b].t-St[a].t||St[b].w-St[a].w);
+ const tile=(k,h,b)=>`<div class="nt"><small>${k}</small><h3>${h}</h3>${b}</div>`;
+ return `<div class="lead"><small>Season report · FH6 Season ${s.n}</small><h1>${d0[0]} ${s.done?'crowned champion':'leads the championship'}</h1><p>${f1(d0[1])} points, ${m>0?f1(m)+' clear of '+d1[0]:'level with '+d1[0]}, and ${wins[d0[0]]||0} wins from ${s.races.length} races.</p><div class="${s.done?'gl':''}">${chip(d0[0])}</div></div><div class="ng">`+
+ tile('Standings',s.done?'Final standings':'Standings',`<table>${s.drivers.map((d,i)=>`<tr><td class="pos">${i+1}</td><td>${chip(d[0])}</td><td class="n"><b>${f1(d[1])}</b></td></tr>`).join('')}</table>`)+
+ tile('Teams','Teams’ standings',s.teams.length?`<table>${s.teams.map((t,i)=>`<tr><td class="pos">${i+1}</td><td>${t[0].split(' & ').map(chip).join(' ')}</td><td class="n"><b>${f1(t[1])}</b></td></tr>`).join('')}</table>`:'<span class="prog">No team results.</span>')+
+ tile('Latest result','Last race: '+lr[0],lr[1].slice(0,3).map((n,i)=>`<div class="pr"><b>${i+1}</b>${chip(n)}</div>`).join(''))+
+ tile('Win count','Who won the races',wl.map(([n,c])=>`<div class="wr">${chip(n)}<i style="width:${c/wl[0][1]*100}%;background:${COL[n]||'#8a94a3'}"></i><b>${c}</b></div>`).join(''))+
+ tile('Streak watch','On a roll',`<div class="st"><div>${chip(sw)}</div><div class="sv"><b>${St[sw].cw}</b><small>race winning streak</small></div></div><div class="st"><div>${chip(sp)}</div><div class="sv"><b>${St[sp].cp}</b><small>race podium streak</small></div></div>`)+
+ tile('All-time','Title race',ts.map(d=>`<div class="wr">${chip(d)}<i style="width:${St[d].t/St[ts[0]].t*100}%;background:${COL[d]}"></i><b>${St[d].t}</b></div>`).join(''))+`</div>`}
+function tro(g,s,vip,note){const n=s.drivers[0][0],c=COL[n]||'#8a94a3',k=g+s.n,G=(i,a,b)=>`<linearGradient id="${i}${k}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient>`;
+ const P=vip?[['#fffdf0','#ffeeb0'],['#ffe9a0','#e6bf55'],['#fff1bf','#dfb44a'],['#f0cf70','#b8861b']]:[['#ffffff','#d4ecff'],['#bfe3ff','#7fbdf5'],['#cdeaff','#6fb2f0'],['#8fc8f5','#2f78c8']];
+ const T=[20,45,70,95,120],M=[30,50,70,90,110],B=[58,64,70,76,82],bowl='20,22 120,22 110,76 82,120 58,120 30,76';
+ const panels=[0,1,2,3].map(i=>`<polygon points="${T[i]},22 ${T[i+1]},22 ${M[i+1]},76 ${B[i+1]},120 ${B[i]},120 ${M[i]},76" fill="url(#${'abcd'[i]}${k})" stroke="#fff" stroke-opacity=".75"/>`).join('');
+ const crown=vip?`<path d="M50 2L54 -20L62 -6L70 -26L78 -6L86 -20L90 2Z" fill="url(#e${k})" stroke="#5e450a" stroke-width=".8" stroke-linejoin="round"/><circle cx="54" cy="-21" r="2.2" fill="#fff"/><circle cx="70" cy="-27" r="2.4" fill="#fff"/><circle cx="86" cy="-21" r="2.2" fill="#fff"/>`:'';
+ const sp=vip?[[2,26,0],[88,18,.9],[10,70,1.7],[84,64,.4]].map(p=>`<i class="spk" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${p[2]}s"></i>`).join(''):'';
+ return `<div class="tro${vip?' vipt':''}">${vip?'<div class="rb gx">★ Most dominant ★</div>'+sp:''}<svg viewBox="${vip?'0 -30 140 260':'0 0 140 230'}" role="img" aria-label="${n}, ${g} season ${s.n}"><defs>${P.map((p,i)=>G('abcd'[i],p[0],p[1])).join('')}<linearGradient id="e${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7e08a"/><stop offset=".5" stop-color="#d4af37"/><stop offset="1" stop-color="#9a7414"/></linearGradient><clipPath id="m${k}"><polygon points="${bowl}"/></clipPath></defs>
+<ellipse cx="70" cy="224" rx="58" ry="6" fill="#000" opacity=".16"/>
+<path d="M27 34C3 34 4 80 40 90" fill="none" stroke="url(#e${k})" stroke-width="5" stroke-linecap="round"/><path d="M113 34C137 34 136 80 100 90" fill="none" stroke="url(#e${k})" stroke-width="5" stroke-linecap="round"/>
+<polygon points="64,118 76,118 75,148 85,178 55,178 65,148" fill="url(#c${k})" stroke="#fff" stroke-opacity=".75"/>${panels}
+<polygon points="${bowl}" fill="${c}" opacity=".18"/><g clip-path="url(#m${k})"><polygon class="sh" points="30,0 52,0 40,130 18,130" fill="#fff" opacity=".4"/></g>
+<ellipse cx="70" cy="22" rx="50" ry="7" fill="url(#a${k})" stroke="#fff" stroke-opacity=".9"/><ellipse cx="70" cy="22" rx="44" ry="4.5" fill="#cfe8fb" opacity=".7"/>
+<path d="M36 36L50 98" stroke="#fff" stroke-opacity=".65" stroke-width="2" stroke-linecap="round"/><ellipse cx="70" cy="142" rx="11" ry="5" fill="url(#e${k})"/>
+<path class="tw" d="M118 10l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="#fff"/>${crown}
+<polygon points="26,176 114,176 124,190 16,190" fill="url(#e${k})"/><rect x="12" y="190" width="116" height="30" rx="3" fill="url(#e${k})" stroke="#fff" stroke-opacity=".5"/>
+<text x="70" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="12" letter-spacing="1.5" fill="#3d2a00">${n.toUpperCase()}</text></svg><small>${g} · Season ${s.n}</small>${vip?`<small class="vsn gx">${note}</small>`:''}</div>`}
+let room='FH6';
+function setRoom(r){room=r;draw()}
+function hall(){
+ const g=room,St=stats([g]),ds=Object.keys(St).sort((a,b)=>St[b].t-St[a].t||St[b].w-St[a].w),done=D[g].filter(s=>s.done),nm=g=='FH5'?'Forza Horizon 5':'Forza Horizon 6',rn=g=='FH5'?'Room I':'Room II';
+ const mx=s=>s.races.reduce((a,r)=>a+(r[0]=='Sprint'?12.5:25),0);let best=null;
+ ['FH5','FH6'].forEach(x=>D[x].filter(s=>s.done).forEach(s=>{const v=s.drivers[0][1]/mx(s);if(!best||v>best.v)best={g:x,s,v}}));
+ const vip=best&&best.g==g?best.s:null,vw=vip?vip.races.filter(r=>r[1][0]==vip.drivers[0][0]).length:0;
+ const spk=[[14,18,0],[84,12,.8],[6,60,1.6],[92,58,.4],[30,88,1.2],[72,90,2]].map(p=>`<i class="spk" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${p[2]}s"></i>`).join('');
+ return `<div class="doors">${['FH5','FH6'].map(r=>`<button class="door${r==g?' on':''}" onclick="setRoom('${r}')"><b>${r=='FH5'?'Room I':'Room II'}</b><small>${r=='FH5'?'Forza Horizon 5':'Forza Horizon 6'}</small></button>`).join('')}</div>
+ <div class="temple"><div class="ped"><b>${nm}</b><small>Hall of Champions · ${rn}</small></div><div class="ent"></div>
+ <div class="cols">${done.map(s=>tro(g,s,s===vip,vip?(best.v*100).toFixed(1)+'% of points · '+vw+' wins':'')).join('')}</div><div class="steps"><i></i><i></i><i></i></div><div class="tally">${ds.map(d=>`<span>${d} <b>${St[d].t}</b></span>`).join('')}</div></div>`}
+function drivers(){
+ const St=stats(['FH5','FH6']),ds=Object.keys(St).sort((a,b)=>St[b].t-St[a].t||St[b].w-St[a].w);
+ return `<div class="hero"><small>The grid</small><h1>Drivers</h1></div>`+ds.map(d=>{const x=St[d],b=D.bio[d];
+  return `<div class="card drv" style="--c:${COL[d]}"><div class="dh"><div class="big">${hel(d)}</div><div><h2>${d}${b.nick?` <span class="nick">“${b.nick}”</span>`:''}</h2><div class="tag">${b.tag}</div></div></div>
+  ${kp([[x.t,'Titles'],[x.tt,'Team titles'],[x.w,'Wins'],[x.p,'Podiums'],[(100*x.w/x.n).toFixed(0)+'%','Win rate'],[(x.pos/x.n).toFixed(2),'Avg finish'],[x.bw,'Best win streak'],[x.bp,'Best podium streak']])}
+  <p class="about">${b.about}</p></div>`}).join('')}
+(function(){const bg=document.querySelector('.bgfx'),R=(a,b)=>a+Math.random()*(b-a);
+ function place(b){const s=R(180,440);b.style.cssText=`width:${s}px;height:${s*R(.7,1.1)}px;left:${R(-5,95)}%;top:${R(-5,95)}%;--dx:${R(-160,160)}px;--dy:${R(-200,120)}px;--o:${R(.2,.4)};animation-duration:${R(16,34)}s`}
+ for(let i=0;i<8;i++){const b=document.createElement('i');b.className='blob';place(b);b.style.animationDelay=R(0,14)+'s';b.addEventListener('animationiteration',()=>place(b));bg.appendChild(b)}})();
+let ss='Both';function setSS(s){ss=s;draw()}
+const MT={win:p=>p==0,pod:p=>p<3,top2:p=>p<2,dry:p=>p!=0};
+const seqR=gs=>{const a=[];gs.forEach(g=>D[g].forEach(s=>s.races.forEach(r=>a.push({g,n:s.n,l:r[0],o:r[1]}))));return a};
+const SLb=r=>r.g+' S'+r.n+' '+(r.l=='Sprint'?'Sprint':r.l);
+function runsOf(a,d,f){let cur=0,st=-1,best={len:0,s:-1,e:-1};a.forEach((r,i)=>{const p=r.o.indexOf(d);if(p<0||p>4)return;if(f(p)){if(!cur)st=i;cur++;if(cur>best.len)best={len:cur,s:st,e:i}}else cur=0});return{best,cur}}
+function seasonRuns(S,d){let cur=0,st=-1,best={len:0,s:-1,e:-1};S.forEach((x,i)=>{const won=x.s.races.some(r=>r[1][0]==d);if(won){if(!cur)st=i;cur++;if(cur>best.len)best={len:cur,s:st,e:i}}else if(x.s.done)cur=0});return{best,cur}}
+
+function champStats(S,ds){
+ const C=S.filter(x=>x.s.done).map(x=>({g:x.g,n:x.s.n,c:x.s.drivers[0][0],r:x.s.drivers[1][0],m:x.s.drivers[0][1]-x.s.drivers[1][1],p:x.s.drivers[0][1]/x.s.races.reduce((q,r)=>q+(r[0]=='Sprint'?12.5:25),0)}));
+ if(!C.length)return '';
+ const lb=x=>x.g+' S'+x.n,T={};
+ ds.forEach(d=>{let cur=0,best=0,span=[0,0],wait=0,maxw=0;C.forEach((x,i)=>{if(x.c==d){cur++;if(cur>best){best=cur;span=[i-cur+1,i]}wait=0}else{cur=0;wait++;maxw=Math.max(maxw,wait)}});T[d]={t:C.filter(x=>x.c==d).length,ru:C.filter(x=>x.r==d).length,cur,best,span,wait,maxw}});
+ const sorted=k=>[...ds].sort((a,b)=>T[b][k]-T[a][k]);
+ const tile=(h,sub,k,f)=>{const mx=Math.max(1,...ds.map(d=>T[d][k]));return `<div class="nt"><small>Champions</small><h3>${h}</h3><div class="prog sm">${sub}</div>${sorted(k).map(d=>`<div class="wr">${chip(d)}<i style="width:${Math.max(T[d][k]/mx*100,T[d][k]?4:0)}%;background:${COL[d]||'#8a94a3'}"></i><b>${T[d][k]}<span class="bs">${f(T[d])}</span></b></div>`).join('')}</div>`};
+ const tiles=tile('Titles','Drivers\u2019 championships won','t',x=>' / '+x.ru+' runner-up')+tile('Title streak','Current run of titles in a row','cur',x=>' / best '+x.best)+tile('Seasons since a title','Current wait for a championship','wait',x=>' / longest '+x.maxw);
+ const hold=(f,v,ok=()=>true)=>ds.filter(d=>f(d)==v&&ok(d)).map(d=>chip(d)).join('');
+ const mt=Math.max(...ds.map(d=>T[d].t)),mb=Math.max(...ds.map(d=>T[d].best)),mr=Math.max(...ds.map(d=>T[d].ru)),mx2=Math.max(...ds.map(d=>T[d].t+T[d].ru));
+ const winners=ds.filter(d=>T[d].t>0),mw=Math.max(0,...winners.map(d=>T[d].maxw));
+ const last=C[C.length-1],cs=[...C].sort((a,b)=>a.m-b.m),shr=[...C].sort((a,b)=>b.p-a.p);
+ const ongo=`<em class="on">ongoing</em>`,card=(h,v,u,body)=>`<div class="rc2"><small>${h}</small><div class="big2 gx">${v}</div><div class="u">${u}</div>${body}</div>`;
+ const cr=[
+  card('Reigning champion',T[last.c].cur,'titles in a row',`<div class="hl">${chip(last.c)}<span>${lb(last)}</span></div>`),
+  card('Most titles',mt,'championships',`<div class="hl">${hold(d=>T[d].t,mt)}</div>`),
+  card('Longest title streak',mb,'seasons in a row',ds.filter(d=>T[d].best==mb&&mb>0).map(d=>`<div class="hl">${chip(d)}<span>${lb(C[T[d].span[0]])}${T[d].span[0]==T[d].span[1]?'':' \u2192 '+lb(C[T[d].span[1]])}</span>${T[d].cur==mb&&T[d].span[1]==C.length-1?ongo:''}</div>`).join('')),
+  card('Longest title drought',mw,'seasons without a title',winners.filter(d=>T[d].maxw==mw).map(d=>`<div class="hl">${chip(d)}${T[d].wait==mw?ongo:''}</div>`).join('')),
+  card('Most runner-up finishes',mr,'second places',`<div class="hl">${hold(d=>T[d].ru,mr)}</div>`),
+  card('Most top-2 finishes',mx2,'titles + runner-ups',`<div class="hl">${hold(d=>T[d].t+T[d].ru,mx2)}</div>`),
+  card('Closest title race',f1(cs[0].m),'points between 1st and 2nd',`<div class="hl">${chip(cs[0].c)}<span>${lb(cs[0])}</span></div>`),
+  card('Biggest title margin',f1(cs[cs.length-1].m),'points clear',`<div class="hl">${chip(cs[cs.length-1].c)}<span>${lb(cs[cs.length-1])}</span></div>`)
+ ].join('');
+ return `<h2 class="sec">Champion stats</h2><div class="ng">${tiles}</div><div class="recs" style="margin-top:30px">${cr}</div>`}
+function statsPage(){
+ const gs=ss=='Both'?['FH5','FH6']:[ss],a=seqR(gs),L=a.length-1,ds=['Toby','Jack','James','Mackenzie','AI'];
+ const S=[];gs.forEach(g=>D[g].forEach(s=>S.push({g,s})));
+ const R={};ds.forEach(d=>{R[d]={};for(const k in MT)R[d][k]=runsOf(a,d,MT[k]);R[d].ssn=seasonRuns(S,d)});
+ const defs=[['win','Longest win streak','races in a row'],['pod','Longest podium streak','races in a row'],['top2','Longest top-2 streak','races in a row'],['dry','Longest winless drought','races without a win'],['ssn','Longest run of seasons with a win','seasons in a row']];
+ const span=(k,x)=>{if(k=='ssn'){const q=S[x.s],w=S[x.e];return x.s==x.e?`${q.g} S${q.s.n}`:`${q.g} S${q.s.n} → ${w.g} S${w.s.n}`}return x.s==x.e?SLb(a[x.s]):`${SLb(a[x.s])} → ${SLb(a[x.e])}`};
+ const endIdx=k=>k=='ssn'?S.length-1:L;
+ const rec=defs.map(([k,h,u])=>{const mx=Math.max(...ds.map(d=>R[d][k].best.len)),hs=ds.filter(d=>R[d][k].best.len==mx&&mx>0);
+  return `<div class="rc2"><small>${h}</small><div class="big2 gx">${mx}</div><div class="u">${u}</div>${hs.map(d=>{const x=R[d][k],on=x.best.e==endIdx(k)&&x.cur==x.best.len;return `<div class="hl">${chip(d)}<span>${span(k,x.best)}</span>${on?'<em class="on">ongoing</em>':''}</div>`}).join('')}</div>`}).join('');
+ const tiles=[['win','Win streak','Current run of wins'],['pod','Podium streak','Current run of podiums'],['top2','Top-2 streak','Current run of top-2 finishes'],['dry','Races since a win','Current winless run'],['ssn','Seasons with a win','Current run of seasons']].map(([k,h,sub])=>{
+  const rk=Math.max(1,...ds.map(d=>R[d][k].best.len)),o=[...ds].sort((x,y)=>R[y][k].cur-R[x][k].cur);
+  return `<div class="nt"><small>Ongoing</small><h3>${h}</h3><div class="prog sm">${sub}</div>${o.map(d=>{const c=R[d][k].cur,b=R[d][k].best.len;return `<div class="wr">${chip(d)}<i style="width:${Math.max(c/rk*100,c?4:0)}%;background:${COL[d]||'#8a94a3'}"></i><b>${c}<span class="bs"> / best ${b}</span></b></div>`}).join('')}</div>`}).join('');
+ const SD=S.filter(x=>x.s.done),mxp=s=>s.races.reduce((q,r)=>q+(r[0]=='Sprint'?12.5:25),0);
+ const wins=[];SD.forEach(x=>{const c={};x.s.races.forEach(r=>c[r[1][0]]=(c[r[1][0]]||0)+1);Object.entries(c).forEach(([d,n])=>wins.push([n,d,x]))});wins.sort((p,q)=>q[0]-p[0]);
+ const share=SD.map(x=>[x.s.drivers[0][1]/mxp(x.s),x.s.drivers[0][0],x]).sort((p,q)=>q[0]-p[0]);
+ const mg=SD.map(x=>[x.s.drivers[0][1]-x.s.drivers[1][1],x.s.drivers[0][0],x]).sort((p,q)=>q[0]-p[0]);
+ const sn=x=>`${x.g} S${x.s.n}`;
+ const sr=(h,v,w,sub)=>`<div class="rc2"><small>${h}</small><div class="big2 gx">${v}</div><div class="u">${sub}</div><div class="hl">${chip(w[1])}<span>${sn(w[2])}</span></div></div>`;
+ const srec=SD.length?sr('Most wins in one season',wins[0][0],wins[0],'race wins')+sr('Highest points share',(share[0][0]*100).toFixed(1)+'%',share[0],'of all available points')+sr('Biggest title margin',f1(mg[0][0]),mg[0],'points clear')+sr('Closest title race',f1(mg[mg.length-1][0]),mg[mg.length-1],'points between 1st and 2nd'):'';
+ const lastS=D.FH6[D.FH6.length-1],lr=lastS.races[lastS.races.length-1];
+ const G=[['Both','Both games'],['FH6','FH6'],['FH5','FH5']];
+ return `<div class="hero"><small><span class="live"></span>Live stats</small><h1>Streaks &amp; records</h1><p class="prog">Updated through FH6 Season ${lastS.n}, ${lr[0]=='Sprint'?'the sprint':'Race '+lr[0].slice(1)}. ${a.length} races across ${S.length} seasons.</p></div>
+ <div class="games">${G.map(g=>`<button class="gbtn${ss==g[0]?' on':''}" onclick="setSS('${g[0]}')"><b>${g[1]}</b></button>`).join('')}</div>
+ <h2 class="sec">Ongoing streaks</h2><div class="ng">${tiles}</div>
+ <h2 class="sec">Streak records</h2><div class="recs">${rec}</div>
+ <h2 class="sec">Season records</h2><div class="recs">${srec}</div>${champStats(S,ds)}`}
+draw();
+</script></body></html>
